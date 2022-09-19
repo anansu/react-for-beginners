@@ -16,6 +16,7 @@ function App() {
   useEffect(() => {
     console.log("call an api");
   },[]);
+  
   useEffect(() => {
     if (keyword !== "" && keyword.length > 5) {
       console.log(`Search for my ${keyword}`)
