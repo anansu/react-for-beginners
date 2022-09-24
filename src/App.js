@@ -11,17 +11,20 @@ function App() {
   }
   
   const handleCounter = () => setCounter(current => current + 1);
-  console.log("I run all the time");
 
   useEffect(() => {
-    console.log("call an api");
+    console.log("I run only once");
   },[]);
-  
+
   useEffect(() => {
     if (keyword !== "" && keyword.length > 5) {
-      console.log(`Search for my ${keyword}`)
+      console.log(`I run when 'keyword' changes`)
     };
   },[keyword]);
+
+  useEffect(() => {
+    console.log("I run 'counter' changes")
+  },[counter]);
   
 
   return (
