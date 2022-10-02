@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Movie from "../components/Movie.js";
-import PropTypes from "prop-types"
+
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -25,6 +25,7 @@ function Home() {
         {movieArray.map((movie) => 
           <Movie 
             key={movie.id}
+            id={movie.id}
             medium_cover_image={movie.medium_cover_image}
             title={movie.title}
             summary={movie.summary}
@@ -36,12 +37,8 @@ function Home() {
   )
 }
 
-Movie.protoTypes = {
-  medium_cover_image: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  summary: PropTypes.string.isRequired,
-  genres: PropTypes.arrayOf(PropTypes.string).isRequired,
-}
+// Home 화면을 구성해주는 컴포넌트
+
 
 export default Home;
 

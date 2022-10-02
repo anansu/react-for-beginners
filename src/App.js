@@ -14,7 +14,7 @@ function App() {
         <h1>Hello</h1>
       </Route>
 
-      <Route path="/movie">
+      <Route path="/movie/:id">
         <Detail />
       </Route>
 
@@ -30,7 +30,7 @@ function App() {
 
 export default App;
 
-// 7.5부터 하면 됨.
+// 7.6부터 하면 됨.
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
