@@ -4,13 +4,14 @@ import PropTypes from "prop-types"
 
 function Movie({id, medium_cover_image, title, summary, genres}) {
     return <div>
+                <hr></hr>
                 <img src={medium_cover_image} alt={title}></img>
                 <h2>
                     <Link to={`/movie/${id}`}>
                         {title}
                     </Link>
                 </h2>
-                <p>{summary}</p>
+                <p>{summary.length > 256 ? `${summary.slice(0,256)}... ` : summary}</p>
                 <div>
                     {genres.map(genre => 
                     <li key={genre}>{genre}</li>)}
