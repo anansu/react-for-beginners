@@ -28,3 +28,5 @@ Movie.propTypes = {
   }
 
 export default Movie;
+
+// home 화면에서 하나하나의 movie 조각들을 그려줄 컴포넌트

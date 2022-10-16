@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Movie from "../components/Movie.js";
-
+import Study from "../components/Study.js";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -33,6 +33,9 @@ function Home() {
           />)}
       </div>
       }
+      <div>
+        <Study></Study>
+      </div>
     </div>
   )
 }

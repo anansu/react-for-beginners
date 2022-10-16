@@ -5,20 +5,25 @@ import {BrowserRouter as Router,
 } from "react-router-dom";
 import Detail from "./routes/Detail.js";
 import Home from "./routes/Home.js";
+import StudyContent from "./routes/StudyContent.js";
 
 
 function App() {
   return <Router>
     <Switch>
-      <Route path="/hello">
+      <Route path="/hello" exact>
         <h1>Hello</h1>
       </Route>
 
-      <Route path="/movie/:id">
+      <Route path="/movie/:id" exact>
         <Detail />
       </Route>
 
-      <Route path="/">
+      <Route path="/study" exact>
+        <StudyContent />
+      </Route>
+
+      <Route path="/" exact>
         <Home />
       </Route>
 
@@ -26,11 +31,13 @@ function App() {
   </Router>;
   // Switch는 Route를 찾아서, 컴포넌트를 렌더링함.
   // Route는 page path와 동일함.
+  // 이거 웃기긴 한데, home을 가능하면 맨 밑에 두어라. exact 옵션 전부 쓸게 아니면 ㅋㅋㅋ...
 }
 
 export default App;
 
-// 7.6부터 하면 됨.
+
+
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
