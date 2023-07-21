@@ -1,6 +1,5 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import PropTypes, { func } from "prop-types"
 
 function Study() {
     return <div>

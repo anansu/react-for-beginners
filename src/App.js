@@ -11,19 +11,19 @@ import StudyContent from "./routes/StudyContent.js";
 function App() {
   return <Router>
     <Switch>
-      <Route path="/hello" exact>
+      <Route path="/hello">
         <h1>Hello</h1>
       </Route>
 
-      <Route path="/movie/:id" exact>
+      <Route path="/movie/:id">
         <Detail />
       </Route>
 
-      <Route path="/study" exact>
+      <Route path="/study">
         <StudyContent />
       </Route>
 
-      <Route path="/" exact>
+      <Route path="/">
         <Home />
       </Route>
 
